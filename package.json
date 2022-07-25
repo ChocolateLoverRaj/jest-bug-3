@@ -1,0 +1,10 @@
+{
+  "name": "jest-bug-3",
+  "private": true,
+  "devDependencies": {
+    "jest": "^28.1.3"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
