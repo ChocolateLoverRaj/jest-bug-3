@@ -12,9 +12,17 @@ jobs:
           - "windows-2019"
           - "ubuntu-22.04"
           - "ubuntu-latest"
-        node_version:
+        node-version:
           - 14
           - 16
           - 18
     runs-on: ${{ matrix.os }}
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm i
+      - run: npm test
+      - name: Check that snapshot is saved in correct place
+        run: cat lib/__snapshots__/test.js.snap
