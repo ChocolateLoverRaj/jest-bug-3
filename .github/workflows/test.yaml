@@ -12,6 +12,8 @@ jobs:
           - "windows-2019"
           - "ubuntu-22.04"
           - "ubuntu-latest"
+          - "macos-12"
+          - "macos-11"
         node-version:
           - 14
           - 16
