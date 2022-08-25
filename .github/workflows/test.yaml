@@ -1,0 +1,20 @@
+name: Test
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - "windows-2022"
+          - "windows-2019"
+          - "ubuntu-22.04"
+          - "ubuntu-latest"
+        node_version:
+          - 14
+          - 16
+          - 18
+    runs-on: ${{ matrix.os }}
+    steps:
