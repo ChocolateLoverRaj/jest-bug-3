@@ -26,4 +26,4 @@ jobs:
       - run: npm i
       - run: npm test -- --updateSnapshot
       - name: Check that snapshot is saved in correct place
-        run: cat lib/__snapshots__/test.js.snap
+        run: cat lib/__snapshots__/file.js.snap
