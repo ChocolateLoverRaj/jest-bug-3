@@ -14,7 +14,6 @@ jobs:
           - "macos-12"
           - "macos-11"
         node-version:
-          - 14
           - 16
           - 18
     runs-on: ${{ matrix.os }}
